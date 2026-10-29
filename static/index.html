@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="SessionGram: all your Telegram accounts in one app. Developed by Nitin Shukla.">
+<title>SessionGram</title>
+<link rel="manifest" href="/static/manifest.json">
+<link rel="icon" href="/static/icon.svg">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+  <!-- web panel password (browser mode only) -->
+  <section id="login" class="screen hidden">
+    <div class="login-box">
+      <div class="login-logo"></div>
+      <h1>SessionGram</h1>
+      <p>Enter the web password shown in the server window (also in config.json).</p>
+      <input id="loginPass" type="password" placeholder="Password" autocomplete="current-password">
+      <button id="loginBtn" class="btn grad">Unlock</button>
+      <div id="loginErr" class="err"></div>
+    </div>
+  </section>
+
+  <!-- main chat list -->
+  <section id="main" class="screen hidden">
+    <header class="bar">
+      <button class="icon-btn" id="menuBtn" data-icon="menu" aria-label="Menu"></button>
+      <div class="bar-title" id="mainTitle"><span>SessionGram</span><small id="mainSub"></small></div>
+      <button class="icon-btn" id="inboxBtn" data-icon="inbox" aria-label="Unified inbox"></button>
+      <button class="icon-btn" id="searchBtn" data-icon="search" aria-label="Search"></button>
+    </header>
+    <nav id="tabs" class="tabs"></nav>
+    <div id="chatList" class="list scroll"></div>
+    <button class="fab" id="fab" data-icon="edit" aria-label="New"></button>
+  </section>
+
+  <!-- drawer -->
+  <div id="scrim" class="scrim"></div>
+  <aside id="drawer" class="drawer">
+    <div class="drawer-head" id="drawerHead"></div>
+    <div class="drawer-body scroll">
+      <div id="drawerAccounts"></div>
+      <div class="sep"></div>
+      <div id="drawerMenu"></div>
+      <div class="drawer-foot">SessionGram · multi-account Telegram<br>Developed by <a href="#" id="footAbout">Nitin Shukla</a></div>
+    </div>
+  </aside>
+
+  <div id="pages"></div>
+  <div id="toast" class="toast"></div>
+  <div id="sheet" class="sheet-wrap hidden"><div class="sheet" id="sheetBody"></div></div>
+  <div id="viewer" class="viewer hidden"></div>
+  <div id="lock" class="lock hidden"></div>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

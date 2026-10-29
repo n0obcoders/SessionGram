@@ -1,0 +1,21 @@
+# Your accounts: never commit these
+sessions.*
+!sessions_template.xlsx
+config.json
+prefs.json
+cache/
+*.keystore
+keystore.properties
+
+# Python / build output
+__pycache__/
+venv/
+.pytest_cache/
+docs/screenshots/*.tmp
+android/local.properties
+android/.gradle/
+android/build/
+android/app/build/
+android/app/src/main/assets/web/
+android/app/src/main/python/server.py
+*.apk
